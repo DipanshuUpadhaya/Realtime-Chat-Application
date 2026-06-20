@@ -1,0 +1,352 @@
+/* Modern Chat Application Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+h3 {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Chat Card Styling */
+.chat {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.chat::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.chat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Message Styling - More Visible */
+.msg {
+    background: linear-gradient(135deg, #00c6fb 0%, #005bea 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 15px 0;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 198, 251, 0.4);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.msg p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* User Info Styling */
+.chat p {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+.chat p i {
+    color: #667eea;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Time Styling */
+.chat hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #667eea, transparent);
+    margin: 15px 0;
+}
+
+.chat p:last-of-type {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* Form Styling */
+form {
+    margin: 10px 0;
+}
+
+/* Input and Textarea Styling */
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* New Chat Button Container */
+.new-chat-btn {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Chat Actions */
+.chat-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.chat-actions button {
+    flex: 1;
+    min-width: 100px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+}
+
+/* Edit and Delete Buttons */
+.edit-btn {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.4);
+}
+
+.edit-btn:hover {
+    box-shadow: 0 6px 20px rgba(240, 147, 251, 0.6);
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    box-shadow: 0 4px 15px rgba(250, 112, 154, 0.4);
+}
+
+.delete-btn:hover {
+    box-shadow: 0 6px 20px rgba(250, 112, 154, 0.6);
+}
+
+.show-btn {
+    background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+    box-shadow: 0 4px 15px rgba(48, 207, 208, 0.4);
+}
+
+.show-btn:hover {
+    box-shadow: 0 6px 20px rgba(48, 207, 208, 0.6);
+}
+
+/* Page Title for New/Edit */
+.page-title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Container */
+.form-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Chat Info */
+.chat-info {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(240, 147, 251, 0.3);
+}
+
+.chat-info p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+.chat-info b {
+    color: white;
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    .chat {
+        padding: 20px;
+    }
+
+    .msg {
+        padding: 15px;
+    }
+
+    .chat-actions {
+        flex-direction: column;
+    }
+
+    .chat-actions button {
+        width: 100%;
+    }
+
+    .form-container {
+        padding: 25px;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #764ba2;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    color: white;
+    padding: 50px;
+    font-size: 1.2rem;
+}
+
+.empty-state p {
+    margin-bottom: 20px;
+}
+
+/* Label Styling for Forms */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Back Button */
+.back-btn {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #333;
+    box-shadow: 0 4px 15px rgba(168, 237, 234, 0.4);
+}
+
+.back-btn:hover {
+    box-shadow: 0 6px 20px rgba(168, 237, 234, 0.6);
+}
